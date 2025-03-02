@@ -1,0 +1,8 @@
+You're right, let's break down the command docker run -p 6379:6379 --name redis redis and explain its purpose in the context of your chat server load balancing setup.
+
+Command Breakdown:
+
+    docker run: This is the Docker command to create and start a container.
+    -p 6379:6379: This maps port 6379 on your host machine to port 6379 in the Docker container. Redis uses port 6379 by default. This allows your Node.js servers running outside the container to connect to the Redis server running inside the container.
+    --name redis: This assigns the name "redis" to the container. This makes it easier to refer to the container in other Docker commands.
+    redis: This is the name of the Docker image that will be used to create the container. Docker will pull the official Redis image from Docker Hub if it's not already present on your system.
